@@ -1,15 +1,15 @@
-import React from "react";
 import logo from "../assets/logo.png";
 import arrow from "../assets/down-arrow.png";
 import cart from "../assets/cart.png";
 import profile from "../assets/profile.png";
 import { Link } from "react-router-dom";
 
+import { IoIosMenu } from "react-icons/io";
 function NavBar() {
   return (
-    <div className="w-5/6 mx-auto  flex items-center justify-between space-x-5 px-5 py-5 ">
+    <div className="w-5/6 mx-auto  flex items-center justify-between md:p-5 py-5 ">
       <img src={logo} alt="Logo" />
-      <div className="flex items-center gap-2">
+      <div className="md:flex items-center gap-2 hidden ">
         <Link to={"#"} className="flex items-center">
           {" "}
           Shop{" "}
@@ -17,10 +17,17 @@ function NavBar() {
 
         <img src={arrow} alt="text" />
       </div>{" "}
-      <Link to={"#"}> Sale</Link>
-      <Link to={"#"}>New Arrivals</Link>
-      <a href="#">Brands</a>
-      <div className="flex gap-4 bg-cream w-6/12 p-4 rounded-full focus:shadow-md">
+      <Link className="hidden md:block" to={"#"}>
+        {" "}
+        Sale
+      </Link>
+      <Link className="hidden md:block" to={"#"}>
+        New Arrivals
+      </Link>
+      <Link className="hidden md:block" to={"#"}>
+        Brands
+      </Link>
+      <div className="md:flex hidden gap-4 bg-cream w-6/12 p-4 rounded-full focus:shadow-md">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-6 w-6"
@@ -45,6 +52,7 @@ function NavBar() {
       <div className="flex items-center gap-3">
         <img src={cart} alt="" />
         <img src={profile} alt="" />
+        <IoIosMenu className="md:hidden block text-2xl" />
       </div>
     </div>
   );
