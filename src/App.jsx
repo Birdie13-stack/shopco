@@ -1,13 +1,17 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-import Hero from "./Components/Hero";
-import NavBar from "./Components/NavBar/Navbar";
+import Layout from "./components/Layout";
+import Home from "./pages/Home";
 
 function App() {
   return (
-    <>
-      <NavBar />
-      <Hero />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
