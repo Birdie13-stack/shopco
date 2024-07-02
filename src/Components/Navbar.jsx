@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { IoIosMenu } from "react-icons/io";
 function NavBar() {
   return (
-    <div className="w-5/6 mx-auto  flex items-center justify-between md:p-5 py-5 ">
+    <div className="w-11/12 mx-auto flex items-center justify-between md:p-5 py-5 ">
       <img src={logo} alt="Logo" />
       <div className="md:flex items-center gap-2 hidden ">
         <Link to={"#"} className="flex items-center">
@@ -43,13 +43,13 @@ function NavBar() {
           />
         </svg>
         <input
-          className="peer h-full w-full outline-none bg-cream text-sm text-gray-700 "
+          className="peer h-full w-full outline-none bg-cream text-base text-gray-700 align-middle	"
           type="text"
           id="search"
-          placeholder="Search for products"
+          placeholder="Search for products...."
         />
       </div>
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-10">
         <img src={cart} alt="" />
         <img src={profile} alt="" />
         <IoIosMenu className="md:hidden block text-2xl" />

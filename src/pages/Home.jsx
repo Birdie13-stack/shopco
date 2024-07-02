@@ -1,10 +1,18 @@
-import Hero from "../components/Hero";
+import Hero from "../Components/Hero";
+import Brands from "../Components/Brands";
+import NewArrivals from "../Components/NewArrivals";
+import TopSelling from "../Components/TopSelling";
+import Browse from "../Components/Browse";
 
 function Home() {
   return (
     <>
       <div>
         <Hero />
+        <Brands />
+        <NewArrivals />
+        <TopSelling />
+        <Browse />
       </div>
     </>
   );
