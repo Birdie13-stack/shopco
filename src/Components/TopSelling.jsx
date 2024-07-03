@@ -23,13 +23,17 @@ function TopSelling() {
               className="inline-block mr-2 text-slate-400"
             />
             <span className="text-sm text-slate-500">5/5</span>
-            <p className="font-bold text-lg">
-              $200{" "}
-              <span className="font-normal line-through text-black/25">
-                $250
-              </span>
-            </p>
-            <div>-20%</div>
+            <div className="flex items-center gap-4">
+              <p className="font-bold text-lg">
+                $200{" "}
+                <span className="font-normal line-through text-black/25">
+                  $250
+                </span>
+              </p>
+              <div className="bg-red-50 w-fit py-1 px-4 rounded-full">
+                <p className="text-red-500">-20%</p>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -64,9 +68,11 @@ function TopSelling() {
         </div>
       </div>
 
-      <button className="py-4 px-20 border-2 ml-auto mr-auto rounded-full border-gray-300 border-solid hover:bg-gray-300 hover:border-none">
-        View all
-      </button>
+      <div className="w-full flex items-center">
+        <button className="py-4 px-20 border-2 ml-auto mr-auto rounded-full border-gray-300 border-solid hover:bg-neutral-100 hover:border-none">
+          View all
+        </button>
+      </div>
     </div>
   );
 }

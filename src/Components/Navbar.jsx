@@ -11,14 +11,12 @@ function NavBar() {
       <img src={logo} alt="Logo" />
       <div className="md:flex items-center gap-2 hidden ">
         <Link to={"#"} className="flex items-center">
-          {" "}
-          Shop{" "}
+          Shop
         </Link>
 
         <img src={arrow} alt="text" />
-      </div>{" "}
+      </div>
       <Link className="hidden md:block" to={"#"}>
-        {" "}
         Sale
       </Link>
       <Link className="hidden md:block" to={"#"}>
